@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--水波纹效果-->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+        android:color="@color/itemSelect_dark"><!--水波纹颜色-->
+    <!--item默认颜色-->
+    <item  android:drawable="@color/itemNormal_dark"/>
+</ripple>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/News.iml" filepath="$PROJECT_DIR$/News.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ViewPagerIndicatolibrary/ViewPagerIndicatolibrary.iml" filepath="$PROJECT_DIR$/ViewPagerIndicatolibrary/ViewPagerIndicatolibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pullrefresh_listview_library/pullrefresh_listview_library.iml" filepath="$PROJECT_DIR$/pullrefresh_listview_library/pullrefresh_listview_library.iml" />
+    </modules>
+  </component>
+</project>

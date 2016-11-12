@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.suixingame.news"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 允许联网 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- 获取GSM（2g）、WCDMA（联通3g）等网络状态的信息 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!-- 获取wifi网络状态的信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <!-- 保持CPU 运转，屏幕和键盘灯有可能是关闭的,用于文件上传和下载 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <!-- 获取sd卡写的权限，用于文件上传和下载 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!-- 允许读取手机状态 用于创建BmobInstallation -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.READ_PROFILE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/icon_red"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PageIndicatorDefaults"
+        android:windowSoftInputMode="adjustPan|stateHidden">
+
+        <!-- 程序启动的Splash，给用户秒开的感觉，防止程序打开白屏 -->
+        <activity
+            android:name=".SplashActivity"
+            android:configChanges="keyboard|orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!-- 显示新闻栏目以及该栏目对应的新闻列表,也是该App主要的数据交互中转站 -->
+        <activity
+            android:name=".activity.NewsColumnActivity"
+            android:configChanges="keyboard|orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!-- 显示文字新闻详情 -->
+        <!-- android:hardwareAccelerated="true"设置硬件加速 -->
+        <activity
+            android:name=".activity.TextNewsActivity"
+            android:configChanges="keyboard|orientation|screenSize|keyboardHidden"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/TextNewsTheme">
+        </activity>
+
+        <!-- 显示图片新闻详情 -->
+        <activity
+            android:name=".activity.ImageNewsActivity"
+            android:configChanges="keyboard|orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/ImageNewsTheme">
+        </activity>
+
+        <!-- 显示用户信息及系统设置 -->
+        <activity
+            android:name=".activity.UserActivity"
+            android:configChanges="keyboard|orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!-- 用户登录 -->
+        <activity
+            android:name=".activity.LoginActivity"
+            android:configChanges="keyboard|orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!-- 用户注册 -->
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:configChanges="keyboard|orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!--跟新闻关联的评论-->
+        <activity
+            android:name=".activity.CommentActivity"
+            android:configChanges="keyboard|orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait">
+        </activity>
+        <!--跟用户关联的评论-->
+        <activity android:name=".activity.CommentActivity2"
+                  android:configChanges="keyboard|orientation|screenSize|keyboardHidden"
+                  android:screenOrientation="portrait">
+        </activity>
+    </application>
+
+</manifest>

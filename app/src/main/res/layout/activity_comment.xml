@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    >
+    <RadioGroup
+        android:id="@+id/rg_comment"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:padding="9dp"
+        >
+        <RadioButton
+            android:id="@+id/rb_comment_new"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/comment_new_hot_bg_select"
+            android:button="@null"
+            android:gravity="center"
+            android:text="最新"
+            android:textSize="12sp"
+            android:textColor="@drawable/comment_new_hot_text_color_select"
+            />
+        <RadioButton
+            android:id="@+id/rb_comment_hot"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/comment_new_hot_bg_select"
+            android:button="@null"
+            android:gravity="center"
+            android:text="最热"
+            android:textSize="12sp"
+            android:textColor="@drawable/comment_new_hot_text_color_select"
+            />
+    </RadioGroup>
+
+    <com.suixingame.library.view.PullRefreshView
+        android:id="@+id/lv_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:divider="@null"
+        />
+</LinearLayout>

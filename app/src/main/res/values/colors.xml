@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#E60200</color>
+    <color name="colorPrimaryDark">#E60200</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="green">#0a0</color>
+    <color name="qianseRed">#D96F5D</color>
+    <color name="gray">#888888</color>
+    <color name="white">#ffff</color>
+    <color name="top_white">#fafafa</color>
+    <color name="content_white">#f6f6f6</color>
+    <color name="bottom_white">#f4f4f4</color>
+    <color name="black">#f000</color>
+    <color name="lightgray">#CBD3D6</color>
+    <color name="timegray">#949494</color>
+    <color name="textBlackDark">#5B5B5B</color>
+    <color name="itemNormal_light">#ffffff</color>
+    <color name="itemSelect_light">#f4f4f4</color>
+    <color name="itemNormal_dark">#000</color>
+    <color name="itemSelect_dark">#3d3d3d</color>
+    <color name="transparent">#0000</color>
+    <color name="textBlack">#333333</color>
+    <color name="image_news_item_bg">#dd1A1B1E</color>
+    <color name="red">#ff0000</color>
+    <color name="darkRed">#da0101</color>
+    <color name="textblue">#558be4</color>
+</resources>

@@ -1,0 +1,12 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="imageNewsHeaderHeight">200dp</dimen>
+    <!--新闻列表类型1的ImageView宽度-->
+    <dimen name="newsData_item_type1_image_width">100dp</dimen>
+    <!--新闻列表类型1的ImageView高度-->
+    <dimen name="newsData_item_type1_image_height">80dp</dimen>
+    <!--新闻列表类型2的ImageView高度-->
+    <dimen name="newsData_item_type2_image_height">90dp</dimen>
+</resources>
