@@ -99,10 +99,15 @@ public class ImageNewsHeaderAdapter extends PagerAdapter{
         List<ImageNewsToJson.ImageNewsItem> list = mDatas.get (tempPosition).list;
         String url = list.get (0).img;
         for(ImageNewsToJson.ImageNewsItem item : list){
-            if (item.osize.w > item.osize.h){
-                //选取一张宽大于高的图片用于展示,默认拿图片集的第一张
-                url = item.img;
-                break;
+            try{
+                //可能w和h是空对象
+                if (item.osize.w > item.osize.h){
+                    //选取一张宽大于高的图片用于展示,默认拿图片集的第一张
+                    url = item.img;
+                    break;
+                }
+            }catch (Exception e){
+                e.printStackTrace ();
             }
         }
         Bitmap bitmap = mCache.getBitmap (url);

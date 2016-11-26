@@ -1,9 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--和用户关联-->
 <RelativeLayout
     android:id="@+id/activity_comment2"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     >
+
+    <com.suixingame.library.view.PullRefreshView
+        android:id="@+id/lv_content_comment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:visibility="invisible"
+        />
+
+    <!--错误信息-->
+    <RelativeLayout
+        android:id="@+id/rl_error_message_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        >
+
+        <TextView
+            android:id="@+id/tv_error_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawablePadding="10dp"
+            android:drawableTop="@drawable/loading_error"
+            android:gravity="center"
+            android:text="点击屏幕,重新获取"
+            android:textSize="14sp"
+            android:visibility="invisible"
+            />
+
+        <ProgressBar
+            android:id="@+id/pb_error_message"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:indeterminateDuration="1000"
+            android:indeterminateTint="@color/red"
+            android:indeterminateTintMode="src_atop"
+            android:layout_centerInParent="true"
+            />
+    </RelativeLayout>
 
 </RelativeLayout>

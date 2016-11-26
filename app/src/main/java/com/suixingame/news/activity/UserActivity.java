@@ -11,7 +11,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.suixingame.news.R;
-import com.suixingame.news.activity.LoginActivity;
 
 import cn.bmob.v3.BmobUser;
 
@@ -80,6 +79,7 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.ll_news_like:
                 break;
             case R.id.ll_comment:
+                startActivity (new Intent (this,CommentActivity2.class));
                 break;
             case R.id.bt_login_out:
                 BmobUser.logOut ();

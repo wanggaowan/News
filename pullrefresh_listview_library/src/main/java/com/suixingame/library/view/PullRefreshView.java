@@ -156,6 +156,8 @@ public class PullRefreshView extends ListView implements AbsListView.OnScrollLis
         }
         switch (ev.getAction ()) {
             case MotionEvent.ACTION_DOWN:
+                //当用户只是单纯的点击或者上划并且第一个可见项不是0，ListView要允许滑动
+                setEnabled (true);
                 downY = ev.getRawY ();
                 break;
             case MotionEvent.ACTION_MOVE:
@@ -178,6 +180,10 @@ public class PullRefreshView extends ListView implements AbsListView.OnScrollLis
                     } else {
                         headerView.setPadding (0, currentPadding, 0, 0);
                     }
+                    /*这样在下拉刷新的时候松开就不会触发点击事件
+                    * 但是这样ListView就不能够滑动，但是可以下拉是因为我们动态设置了header的Padding
+                    */
+                    setEnabled (false);
                     //不返回true，那么在往回滑动时ListView会有自己的惯性，滑动距离实际比自己手指滑动的长
                     return true;
                 }

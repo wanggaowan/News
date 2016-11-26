@@ -111,7 +111,7 @@ public class CommentDB {
     }
 
     /**
-     * 获取新闻Activity用户展示的最新十条评论
+     * 获取新闻Activity展示的最新十条评论
      * @param url 评论新闻url
      */
     public static void getCommentJustTen (String url, final Handler handler, final int what) {
@@ -174,8 +174,8 @@ public class CommentDB {
         query.setLimit (20);
         query.setSkip (skip);
         query.setCachePolicy (BmobQuery.CachePolicy.NETWORK_ELSE_CACHE);
-        //设置缓存最长保留一天
-        query.setMaxCacheAge (TimeUnit.DAYS.toMillis (1));
+        //设置缓存最长保留7天
+        query.setMaxCacheAge (TimeUnit.DAYS.toMillis (7));
         query.findObjects (new FindListener<Comment> () {
             @Override
             public void done (List<Comment> list, BmobException e) {
